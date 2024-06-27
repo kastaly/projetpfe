@@ -1,0 +1,187 @@
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  gap: 1rem;
+}
+
+main .timeline {
+  width: 100%;
+  margin: 2rem 2rem;
+  height: 2px;
+}
+
+
+
+main .swipe-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  margin-top: 2rem;
+}
+
+main .card {
+  width: 320px;
+  height: 180px;
+  background-color: #fff;
+  border-radius: 1rem;
+  animation: fadeIn 2s linear calc(0.2s * var(--index)) backwards;
+}
+
+main .card:first-of-type {
+  margin-top: 50px;
+}
+
+main .card__header {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+main .card__header .card__profile {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+}
+
+main .card__header .card__info__name {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+main .card__header .card__info__address {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #333;
+  text-decoration: none;
+}
+
+main .card__header .card__info__misc {
+  color: #c2c2c2;
+  font-size: 0.9rem;
+  margin-bottom: 0.4rem;
+}
+
+main .card__footer {
+  padding: 1rem 0;
+  text-align: center;
+  font-weight: 600;
+  color: #1e90ff;
+  border-top: 1px solid #ccc;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  15%, 100% {
+    opacity: 1;
+  }
+}
+
+//search form css
+.glow {
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    border-radius: 100%;
+  }
+  
+  .glow-1 {
+    animation: glow1 4s linear infinite;
+  }
+  
+  .glow-2 {
+    animation: glow2 4s linear infinite;
+    animation-delay: 100ms;
+  }
+  
+  .glow-3 {
+    animation: glow3 4s linear infinite;
+    animation-delay: 200ms;
+  }
+  
+  .glow-4 {
+    animation: glow4 4s linear infinite;
+    animation-delay: 300ms;
+  }
+  
+  @keyframes glow1 {
+    0% {
+      transform: translate(10%, 10%) scale(1);
+    }
+    25% {
+      transform: translate(-10%, 10%) scale(1);
+    }
+    50% {
+      transform: translate(-10%, -10%) scale(1);
+    }
+    75% {
+      transform: translate(10%, -10%) scale(1);
+    }
+    100% {
+      transform: translate(10%, 10%) scale(1);
+    }
+  }
+  
+  @keyframes glow2 {
+    0% {
+      transform: translate(-10%, -10%) scale(1);
+    }
+    25% {
+      transform: translate(10%, -10%) scale(1);
+    }
+    50% {
+      transform: translate(10%, 10%) scale(1);
+    }
+    75% {
+      transform: translate(-10%, 10%) scale(1);
+    }
+    100% {
+      transform: translate(-10%, -10%) scale(1);
+    }
+  }
+  
+  @keyframes glow3 {
+    0% {
+      transform: translate(-10%, 10%) scale(1);
+    }
+    25% {
+      transform: translate(-10%, -10%) scale(1);
+    }
+    50% {
+      transform: translate(10%, -10%) scale(1);
+    }
+    75% {
+      transform: translate(10%, 10%) scale(1);
+    }
+    100% {
+      transform: translate(-10%, 10%) scale(1);
+    }
+  }
+  
+  @keyframes glow4 {
+    0% {
+      transform: translate(10%, -10%) scale(1);
+    }
+    25% {
+      transform: translate(10%, 10%) scale(1);
+    }
+    50% {
+      transform: translate(-10%, 10%) scale(1);
+    }
+    75% {
+      transform: translate(-10%, -10%) scale(1);
+    }
+    100% {
+      transform: translate(10%, -10%) scale(1);
+    }
+  }
+  

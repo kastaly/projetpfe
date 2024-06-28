@@ -14,6 +14,7 @@ export default createStore({
     logout(state) {
       state.isLoggedIn = false;
       state.user = null; // Clear user data upon logout
+      window.location.href = '/login';
     },
       setUser(state, user) {
         state.user = user;

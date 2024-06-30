@@ -92,7 +92,7 @@ label {
 .header_title {
   position: relative;
   font-family: "Courgette", cursive;
-  font-size: 85px;
+  font-size: 70px;
   line-height: 80px;
   margin: 0;
   color: var(--c-dark-grey);
@@ -258,7 +258,7 @@ label {
   position: absolute;
   left: 21vw;
   bottom: 0;
-  width: 27vw;
+  width: 23vw;
   height: 51vh;
   overflow-y: auto;
   padding-left: 0;
@@ -309,7 +309,7 @@ label {
   top: 0;
   left: 0;
   height: 100%;
-  width: 100vw;
+  width: 96vw;
   background-color: var(--c-dark-grey);
   will-change: transform;
   transform: translateX(0);

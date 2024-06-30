@@ -20,9 +20,6 @@ return new class extends Migration
             $table->string('title');
             $table->text('steps');
             $table->text('ingredients');
-            // $table->foreignId('hightlightedIngredient_id')
-            // ->constrained('hightlighted_ingredients')
-            // ->onDelete('cascade');
             $table->integer('total_time');
             $table->integer('servings');
             $table->string('image'); // For storing image path

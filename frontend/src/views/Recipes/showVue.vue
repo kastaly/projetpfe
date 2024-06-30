@@ -10,13 +10,13 @@
       </svg>
     </label>
 
-    <input class="btn_go_down__checkbox" id="goDown" type="checkbox" style="">
+    <input class="btn_go_down__checkbox" id="goDown" type="checkbox" >
     <label class="btn_go_down" for="goDown" @click="toggleComments">
-      <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+      <svg width="60" height="60" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" transform="rotate(90)">
         <path style="fill:#60b533" d="m178.6 202 202.1 198-202.1 198-60.3-61.8L257.2 400 118.3 263.8z"/>
         <path style="fill:#349905" d="m273.5 0 408.2 400-408.2 400-121.9-124.9L432.3 400 151.6 124.9z"/>
         <path style="fill:#5ecc25" d="m202.1 401-84-86.2v166.4z"/>
-      </svg>
+      </svg>      
     </label>
 
     <main class="main ">
@@ -72,7 +72,7 @@
           </div>
            
 
-          <div class="ingredients">
+          <div class="ingredients ">
             <template v-if="highlightedIngredients.length > 0">
               <figure class="ingredients_item" v-for="ingredient in highlightedIngredients" :key="ingredient.id">
                 <img :src="ingredient.image_url" :alt="ingredient.name"/>
@@ -98,11 +98,12 @@
           <video v-if="recipe.video_url" :src="recipe.video_url" controls autoplay loop poster="">
             Recipe video
           </video>
-          <div class="v-else" v-else>
-            no video of this recipe is shared
+          <div v-else class="no-video flex justify-center items-center h-full bg-gray-300 rounded-lg text-gray-700 text-lg font-semibold text-center p-5 shadow-inner">
+            No video of this recipe is shared
           </div>
         </div>
       </div>
+
     </div>
     </main>
   </div>
@@ -246,5 +247,7 @@ export default {
 };
 </script>
 
+<style>
 
+</style>
 <style src="./../../show.css"></style>

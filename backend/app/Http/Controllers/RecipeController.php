@@ -53,7 +53,9 @@ class RecipeController extends Controller
             ->get();
 
         $categories = Category::all();
-        $users = User::where('role', 'user')->get();
+        $users =User::where('role', 'user')
+        ->latest()
+        ->get();
         $user = Auth::check() ? Auth::user() : null;
 
         if ($user) {

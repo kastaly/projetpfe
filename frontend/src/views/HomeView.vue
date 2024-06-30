@@ -130,13 +130,15 @@ export default {
   },
   methods: {
     async fetchRecipes() {
-      try {
-        const response = await axiosClient.get('/recipes');
-        this.recipes = response.data.recipes;
-      } catch (error) {
-        console.error('Error fetching recipes:', error);
-      }
-    },
+  try {
+    const response = await axiosClient.get('/recipes');
+    // Assuming response.data.recipes is an array of all recipes
+    this.recipes = response.data.recipes.slice(0, 9); // Limit to the first 9 recipes
+  } catch (error) {
+    console.error('Error fetching recipes:', error);
+  }
+},
+
     async fetchComments() {
       try {
         const response = await axiosClient.get('/show-Comments');

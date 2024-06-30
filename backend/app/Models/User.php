@@ -56,5 +56,17 @@ class User extends Authenticatable
     {
         return $this->belongsToMany(Recipe::class, 'likes', 'user_id', 'recipe_id')->withTimestamps();
     }
+    public function getFullImageUrlAttribute()
+    {
+        $localPath = 'storage/' . $this->profile_picture;
+        $apiPath = 'http://127.0.0.1:8001/storage/' . $this->profile_picture;
 
+        if ($this->profile_picture && file_exists(public_path($localPath))) {
+            return asset($localPath);
+        } elseif ($this->profile_picture) {
+            return $apiPath;
+        } else {
+            return null;
+        }
+    }
 }
